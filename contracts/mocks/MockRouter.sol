@@ -20,7 +20,6 @@ contract MockRouter {
         // puxa do msg.sender (CriptoPayRouter)
         tokenIn.transferFrom(msg.sender, address(this), amountIn);
 
-        // envia mesma quantia de tokenOut pro destinatario
         tokenOut.mint(to, amountIn);
 
         amounts = new uint256[](2);
